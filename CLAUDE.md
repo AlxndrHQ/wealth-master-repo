@@ -1,5 +1,13 @@
 # Wealth Master Repo — control center
 
+## Shared context (read first)
+This project's current state and decision log live in Google Drive, shared with Gemini:
+**AI Collaboration › Claude Projects › Wealth Master Repo**
+- **Wealth Master Repo · Summary**: what it is, links, current state, open items. Read before working; rewrite it in place when the state changes.
+- **Wealth Master Repo · Decisions**: newest-first log of what was decided and why. Add an entry (date · decision, then Why / Rejected / Revisit if / Decided by) whenever something is decided; never edit old entries.
+- **Discussions/** and **Assets/** in that folder hold research, chat exports and files.
+The folder's "00 Index" explains the system. Code stays here and on GitHub; the "why" lives in Drive.
+
 This repo is two things:
 1. **The master index** (`index.html`, live at https://alxndrhq.github.io/wealth-master-repo/): a front door that links to every project.
 2. **The place to give update requests.** When the user asks for a change ("update X on Y", "add Z to all the sites"), go into the right project folder(s), make the change, commit, push, and confirm the live site updated.
