@@ -97,7 +97,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <section class="hero">
     <p class="kicker">Maps · Mind Maps · Directories</p>
     <h1>Who built the wealth, who holds it, and where it sits today.</h1>
-    <p>Six sourced, interactive projects about old fortunes, the slave trade, HBCU alumni, Black-owned business and land ownership, all built in the same style. Pick one to open it.</p>
+    <p>Seven interactive projects about old fortunes, the slave trade, HBCU alumni, Black-owned business, land ownership and the semiconductor buildout. Pick one to open it.</p>
   </section>
 
   <div id="groups"></div>
@@ -131,6 +131,10 @@ const GROUPS = [
   { title: 'Land & Property', note: 'Who owns the ground', items: [
     { name: 'Ground Truth', sub: "Land Ownership · Prince George's County", repo: 'pg-county-land-map', hue: 'var(--c-intra)',
       desc: 'Click any parcel to see its owner of record, assessed values, last sale and zoning, drawn from Maryland SDAT assessment records.' },
+  ]},
+  { title: 'Markets', note: 'Where the new money is being made', items: [
+    { name: 'Semiconductor Earnings', sub: '2026 AI Buildout · Logic + Memory', repo: 'SemiConductor-Earnings-Breakdown', hue: 'var(--c-op)',
+      desc: 'An earnings breakdown of the chip companies behind the AI buildout, with a live ticker, a stack-flow diagram, and founder and credit profiles for each company.' },
   ]},
 ];
 

@@ -10,6 +10,7 @@ One front door to every sister project. `index.html` is a single static page, st
 | 04 | HBCU Legacy Web | https://alxndrhq.github.io/hbcu-legacy-mind-map/ | [hbcu-legacy-mind-map](https://github.com/AlxndrHQ/hbcu-legacy-mind-map) |
 | 05 | Black Business Directory | https://alxndrhq.github.io/black-business-directory/ | [black-business-directory](https://github.com/AlxndrHQ/black-business-directory) |
 | 06 | Ground Truth | https://alxndrhq.github.io/pg-county-land-map/ | [pg-county-land-map](https://github.com/AlxndrHQ/pg-county-land-map) |
+| 07 | Semiconductor Earnings | https://alxndrhq.github.io/SemiConductor-Earnings-Breakdown/ | [SemiConductor-Earnings-Breakdown](https://github.com/AlxndrHQ/SemiConductor-Earnings-Breakdown) |
 
 ## Adding a project
 
@@ -17,7 +18,7 @@ Add an entry to the `GROUPS` array near the bottom of `index.html` (`name`, `sub
 
 ## Linking back from each site
 
-Each sister site's header has a row of mono uppercase links (`.tabs button`, `.theme`). Put this link in that row to come back here:
+Each D3 sister site's header has a row of mono uppercase links (`.tabs button`, `.theme`). Put this link in that row to come back here:
 
 ```html
 <a class="theme" href="https://alxndrhq.github.io/wealth-master-repo/" title="All projects">← All projects</a>
