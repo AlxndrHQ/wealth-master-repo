@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AlxndrHQ — Master Index</title>
+<meta name="description" content="One front door to every map, mind map and directory: wealth history, the triangle trade, HBCU legacy, Black-owned business and land ownership.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(e){}</script>
+<style>
+:root{
+  --bg:#FAFAF7; --bg2:#F3F2EC; --text:#1F1D18; --text2:#1f1d18d9; --muted:#6B6960; --dim:#9C998E;
+  --line:#E8E6DF; --line2:#D8D5CB; --accent:#8A5A2B; --accent-soft:#8a5a2b1a;
+  --c-op:#3E6A8A; --c-inv:#6B5B9A; --c-his:#8A5A2B; --c-bhis:#9B3D2E; --c-tech:#3C7A5E; --c-intra:#2F7A80;
+  --serif:'Iowan Old Style','Apple Garamond',Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  --mono:'JetBrains Mono','SF Mono',Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E0E10; --bg2:#151518; --text:#E8E6DF; --text2:#e8e6dfd9; --muted:#7A7A82; --dim:#56565D;
+    --line:#26262B; --line2:#34343A; --accent:#C9A875; --accent-soft:#c9a8751f;
+    --c-op:#86A8C4; --c-inv:#A99BD3; --c-his:#C9A875; --c-bhis:#E0907A; --c-tech:#7FB89B; --c-intra:#7CC3C8;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E0E10; --bg2:#151518; --text:#E8E6DF; --text2:#e8e6dfd9; --muted:#7A7A82; --dim:#56565D;
+  --line:#26262B; --line2:#34343A; --accent:#C9A875; --accent-soft:#c9a8751f;
+  --c-op:#86A8C4; --c-inv:#A99BD3; --c-his:#C9A875; --c-bhis:#E0907A; --c-tech:#7FB89B; --c-intra:#7CC3C8;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--text);font:14px/1.6 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;min-height:100vh}
+a{color:var(--accent);text-underline-offset:2px}
+::selection{background:#c9a87533}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+.mark{font:500 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.theme{background:none;border:0;border-bottom:1px solid transparent;padding:4px 0;font:500 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);cursor:pointer}
+.theme:hover{color:var(--text);border-bottom-color:var(--line2)}
+
+.hero{padding:72px 0 40px}
+.kicker{font:500 10.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+.hero h1{font:400 clamp(34px,6vw,56px)/1.05 var(--serif);letter-spacing:-.015em;margin:0 0 18px;text-wrap:balance}
+.hero p{font:400 17px/1.55 var(--serif);color:var(--text2);max-width:60ch;margin:0;text-wrap:pretty}
+
+.group{padding:28px 0 8px}
+.group-head{display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line);padding-top:14px;margin-bottom:18px}
+.group-head h2{font:500 10.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0}
+.group-head span{font:400 13px var(--serif);color:var(--dim);font-style:italic}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{position:relative;display:flex;flex-direction:column;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:20px 20px 16px;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--line2);transform:translateY(-1px)}
+.card::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:2px;border-radius:2px;background:var(--hue,var(--accent))}
+.card .num{font:500 10.5px var(--mono);letter-spacing:.12em;color:var(--dim);margin-bottom:8px}
+.card h3{font:400 22px/1.2 var(--serif);margin:0 0 4px;letter-spacing:-.005em}
+.card h3 a{color:var(--text);text-decoration:none}
+.card h3 a::after{content:"";position:absolute;inset:0;border-radius:6px}
+.card h3 a:focus-visible{outline:none}
+.card:has(h3 a:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.card .sub{font:500 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--hue,var(--accent));margin:0 0 10px}
+.card p{margin:0 0 16px;color:var(--text2);flex:1}
+.links{display:flex;gap:18px;align-items:center;border-top:1px solid var(--line);padding-top:12px;position:relative;z-index:1}
+.links a{font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--accent)}
+.links a.go{color:var(--accent)}
+.links .repo{margin-left:auto;color:var(--dim);text-transform:none;letter-spacing:.02em}
+
+footer{border-top:1px solid var(--line);margin-top:56px;padding:22px 0 40px;color:var(--muted);font:400 12px/1.6 var(--mono)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .hero{padding:48px 0 28px}
+  .grid{grid-template-columns:1fr}
+  .links .repo{display:none}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="mark">AlxndrHQ · Master Index</div>
+    <button class="theme" id="themeBtn" type="button">☀ Light</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="kicker">Maps · Mind Maps · Directories</p>
+    <h1>Who built the wealth, who holds it, and where it sits today.</h1>
+    <p>Six sourced, interactive projects about old fortunes, the slave trade, HBCU alumni, Black-owned business and land ownership, all built in the same style. Pick one to open it.</p>
+  </section>
+
+  <div id="groups"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Every site is a static GitHub Pages build.</span>
+    <a href="https://github.com/AlxndrHQ">github.com/AlxndrHQ</a>
+  </div>
+</footer>
+
+<script>
+const GH = 'https://github.com/AlxndrHQ/';
+const PAGES = 'https://alxndrhq.github.io/';
+const GROUPS = [
+  { title: 'Wealth History', note: 'How the great fortunes were made and where they went', items: [
+    { name: 'Algos & Capital', sub: 'Historical Wealth Mind Map', repo: 'historical-wealth-mind-map', hue: 'var(--c-his)',
+      desc: 'The flagship mind map and executive briefing on quiet millionaires, billionaires and historic Black business visionaries: where they started, how their money grows, and how they protect it.' },
+    { name: 'Old Money', sub: "Europe's Great Fortunes, 1066–Today", repo: 'european-wealth-map', hue: 'var(--c-op)',
+      desc: 'Dossiers on 86 families and companies, with each family’s published net worth shown next to what it actually controls, plus money trails from land grants to trusts.' },
+    { name: 'The Triangle Trade', sub: 'Players of the Slave Trade, 1492–Today', repo: 'triangle-trade-mind-map', hue: 'var(--c-bhis)',
+      desc: 'The families, states, banks and companies that financed and profited from the trade, the people it enslaved, and the money trails that run to today.' },
+  ]},
+  { title: 'Black Legacy & Enterprise', note: 'Institutions, alumni and owners', items: [
+    { name: 'HBCU Legacy Web', sub: 'Schools & Notable Alumni', repo: 'hbcu-legacy-mind-map', hue: 'var(--c-tech)', path: '#/map',
+      desc: 'Every HBCU that has ever existed, operating, closed or merged, with alumni in business, the bodies that founded the schools, and the Divine Nine.' },
+    { name: 'Black Business Directory', sub: 'Black-Owned Businesses Nationwide', repo: 'black-business-directory', hue: 'var(--c-inv)',
+      desc: 'Storefronts, B2B firms and federal contractors on one map, with owner profiles grouped by sector ETF. Deepest coverage is in DC and Baltimore.' },
+  ]},
+  { title: 'Land & Property', note: 'Who owns the ground', items: [
+    { name: 'Ground Truth', sub: "Land Ownership · Prince George's County", repo: 'pg-county-land-map', hue: 'var(--c-intra)',
+      desc: 'Click any parcel to see its owner of record, assessed values, last sale and zoning, drawn from Maryland SDAT assessment records.' },
+  ]},
+];
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let n = 0;
+document.getElementById('groups').innerHTML = GROUPS.map(g => `
+  <section class="group">
+    <div class="group-head"><h2>${esc(g.title)}</h2><span>${esc(g.note)}</span></div>
+    <div class="grid">${g.items.map(p => {
+      const site = PAGES + p.repo + '/' + (p.path || '');
+      return `
+      <article class="card" style="--hue:${p.hue}">
+        <div class="num">${String(++n).padStart(2,'0')}</div>
+        <h3><a href="${site}">${esc(p.name)}</a></h3>
+        <p class="sub">${esc(p.sub)}</p>
+        <p>${esc(p.desc)}</p>
+        <div class="links">
+          <a class="go" href="${site}">Open site →</a>
+          <a href="${GH + p.repo}">GitHub</a>
+          <a class="repo" href="${GH + p.repo}">${esc(p.repo)}</a>
+        </div>
+      </article>`;}).join('')}
+    </div>
+  </section>`).join('');
+
+// Same theme key as the sister sites, so the choice carries across all of them on alxndrhq.github.io
+const root = document.documentElement, tb = document.getElementById('themeBtn');
+const mq = matchMedia('(prefers-color-scheme: dark)');
+const cur = () => root.dataset.theme || (mq.matches ? 'dark' : 'light');
+const paint = () => { const t = cur(); tb.textContent = t === 'dark' ? '☾ Dark' : '☀ Light'; tb.title = `Switch to ${t === 'dark' ? 'light' : 'dark'} mode`; };
+tb.onclick = () => { const t = cur() === 'dark' ? 'light' : 'dark'; root.dataset.theme = t; try { localStorage.setItem('theme', t); } catch (_) {} paint(); };
+mq.addEventListener?.('change', paint);
+paint();
+</script>
+</body>
+</html>
