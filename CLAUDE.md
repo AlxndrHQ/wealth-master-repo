@@ -16,9 +16,15 @@ All folders are siblings of this one, under `/Users/stevenjr./Documents/Document
 | HBCU Legacy Web | `HBCU Legacy Web` | hbcu-legacy-mind-map | Edit `sources/*.json`, then run `python3 tools/build.py` (never hand-edit `data.json`) |
 | Black Business Directory | `Black Business Directory /black-business-directory` (the outer folder name has a trailing space and is not a repo) | black-business-directory | Static; data is embedded between `/*DATA-START*/` and `/*DATA-END*/` in `index.html`, plus `places.json` |
 | Ground Truth | `Real Estate Map` | pg-county-land-map | GitHub Actions deploys only `web/`. Read its `CLAUDE.md` and `HANDOFF.md` first |
-| Semiconductor Earnings | `SemiConductor-Earnings-Breakdown` | SemiConductor-Earnings-Breakdown | Vite + React + Tailwind. Actions runs `npm ci && npm run build` and deploys `dist/`. The Finnhub key is in the repo secret `VITE_FINNHUB_KEY` |
+| Semiconductor Earnings | `SemiConductor-Earnings-Breakdown` | SemiConductor-Earnings-Breakdown | Vite + React + Tailwind. Actions runs `npm ci && npm run build` and deploys `dist/`. The Finnhub key is in the repo secret `VITE_FINNHUB_KEY`. Automated, see below |
 
 The six D3 sites share one design system (Iowan serif, JetBrains Mono, bronze accent, `theme` localStorage key). A change to shared style or the header should usually go to all six. The semiconductor site has its own dark, Obsidian-style design.
+
+## Automation (Semiconductor Earnings)
+
+- **Every night at 07:00 UTC (GitHub Action, `deploy.yml`):** `scripts/update-earnings.mjs` pulls each company's latest EPS and revenue against estimates, plus its next report date, from Finnhub into `src/data/live-earnings.json`. If the file changed, it commits as `github-actions[bot]` and redeploys. SK Hynix and Nanya aren't on Finnhub's free plan.
+- **Every Friday at 23:00 UTC (Claude routine, Opus, https://claude.ai/code/routines/trig_01LB8jrTEUSxBab7cxk2FQCa):** rewrites the `earnings` write-ups in `companies.js` for companies that reported a new quarter, updates confirmed report dates, and pushes to `main`.
+- Both commit to `main`, so always `git pull --rebase` before pushing there. Never hand-edit `live-earnings.json`.
 
 ## How to make updates
 
