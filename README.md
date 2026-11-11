@@ -10,7 +10,7 @@ One front door to every sister project. `index.html` is a single static page, st
 | 04 | HBCU Legacy Web | https://alxndrhq.github.io/hbcu-legacy-mind-map/ | [hbcu-legacy-mind-map](https://github.com/AlxndrHQ/hbcu-legacy-mind-map) |
 | 05 | Black Business Directory | https://alxndrhq.github.io/black-business-directory/ | [black-business-directory](https://github.com/AlxndrHQ/black-business-directory) |
 | 06 | Ground Truth | https://alxndrhq.github.io/pg-county-land-map/ | [pg-county-land-map](https://github.com/AlxndrHQ/pg-county-land-map) |
-| 07 | Semiconductor Earnings | https://alxndrhq.github.io/SemiConductor-Earnings-Breakdown/ | [SemiConductor-Earnings-Breakdown](https://github.com/AlxndrHQ/SemiConductor-Earnings-Breakdown) |
+| 07 | Semiconductor Earnings | https://alxndrhq.github.io/Semiconductor-Earnings-Discussion/ | [Semiconductor-Earnings-Discussion](https://github.com/AlxndrHQ/Semiconductor-Earnings-Discussion) |
 
 ## Adding a project
 
